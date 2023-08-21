@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nurse Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'nurse/dashboard.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Nurse dashboard content here -->        
+        <header>
+            <h1>Nurse Dashboard</h1>
+        </header>
+
+        <div class="content">
+            <div class="card">
+                <h2>Patient Information</h2>
+                <ul>
+                    <li>Name: John Doe</li>
+                    <li>Age: 70</li>
+                    <li>Medical Condition: Hypertension</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Medication Schedule</h2>
+                <table>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>Medicine A</td>
+                        <td>08:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Medicine B</td>
+                        <td>01:00 PM</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
