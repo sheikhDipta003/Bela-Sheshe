@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from nurse.views import nurse_dashboard
 from doctors.views import doctor_dashboard
+from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('nurse/dashboard/', nurse_dashboard, name='nurse_dashboard'),
     path('doctors/dashboard/', doctor_dashboard, name='doctors_dashboard'),
+    path('residents/', include('residents.urls'))
 ]

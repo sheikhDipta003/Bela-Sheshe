@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'doctors.apps.DoctorsConfig',
     'nurse.apps.NurseConfig',
+    'residents.apps.ResidentsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
