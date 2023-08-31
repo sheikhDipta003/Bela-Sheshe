@@ -55,7 +55,7 @@ Similarly, write separate functions for each of the views listed in correspondin
 
 HTML files:
 - html files will be placed in doctors/templates/doctors/, nurses/templates/nurses/ and residents/templates/residents/ folders respectively.
-- We have to create one html file for each of the views for that particular app (doctors,nurses and residents).  
+- We have to create one html file for each of the views for that particular app (doctors,nurses and residents).
 
 
 03 -> tables : 1,2,4,11; views + html: all of residents app
