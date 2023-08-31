@@ -8,6 +8,7 @@ Version-1 of Dashboard and ResidentStatus views for residents app.
 
 2) Then I have run 'python manage.py makemigrations' which will create the backend SQL code for creating the tables. After that, by running 'python manage.py migrate', django will execute these backend codes and thus create the three tables.
 
+***Install viewflow using 'pip install django-viewflow --pre' BEFORE RUNNING THE MIGRATIONS***
 
 3) Then I opened cmd prompt and run 'python manage.py shell' to open the python shell. In there, I executed these commands one-by-one:
 	(1) from residents.models import Member	=> import Member table from the DB
