@@ -24,5 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('nurse/dashboard/', nurse_dashboard, name='nurse_dashboard'),
     path('doctors/dashboard/', doctor_dashboard, name='doctors_dashboard'),
-    path('residents/', include('residents.urls'))
+    path('residents/', include('residents.urls')),
+    path('doctors/', include('doctors.urls'))
+
 ]
