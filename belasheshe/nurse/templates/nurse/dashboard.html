@@ -9,11 +9,19 @@
     <div class="container mt-4">
         <h2>Nurse Dashboard</h2>
         
-        <!-- Display medicine and checkup schedules -->
-        <h3>Medicine and Checkup Schedules</h3>
+        <!-- Display medicine schedule -->
+        <h3>Medicine Schedule</h3>
         <ul>
-            {% for schedule in schedules %}
+            {% for schedule in medicine_schedule %}
                 <li>{{ schedule.name }} - Time: {{ schedule.time }} - Quantity: {{ schedule.quantity }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Display checkup schedule -->
+        <h3>Checkup Schedule</h3>
+        <ul>
+            {% for schedule in checkup_schedule %}
+                <li>{{ schedule.item }} - Time: {{ schedule.time }}</li>
             {% endfor %}
         </ul>
     </div>
