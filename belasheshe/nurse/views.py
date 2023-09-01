@@ -60,6 +60,28 @@ class CheckupDataEntryView(View):
             new_instance.save()
             return redirect('success_page')
 
+# fetches all the checkup data for all members and sorts them according to BloodPressure, Sugar and Heartrate as the user desires
+class CheckupDataListView(View):
+    template_name = 'nurse/checkup_data_list.html'  # Update with your actual template name
+
+    def get_checkup_data(self, order_by):
+        checkup_data = (
+            CheckupSchedule.objects
+            .filter(completed=True)  # Filter completed checkups, adjust as needed
+            .order_by(order_by)  # Order by the selected field (Blood_pressure, Sugar, or Heartrate)
+        )
+        return checkup_data
+
+    def get(self, request, *args, **kwargs):
+        # Determine the desired order field from the query parameter (default to Blood_pressure)
+        order_by = request.GET.get('order_by', 'Blood_pressure')
+
+        # Get the sorted checkup data
+        sorted_checkup_data = self.get_checkup_data(order_by)
+
+        return render(request, self.template_name, {'checkup_data': sorted_checkup_data})
+
+
 class ResidentConditionView(View):
     template_name = 'nurse/residentCondition.html'  # Update with your actual template name
 
