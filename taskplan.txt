@@ -3,17 +3,17 @@
 Database tables:
 1) Member
 2) Resident's Medical Conditions
-3) Medical Conditions
+3) Medical Conditions---
 4) Current Condition
-5) Medicine
-6) Medicine Chart
-7) Dosage
+5) Medicine---
+6) Medicine Chart---
+7) Dosage---
 8) Checkup Item
-9) Checkup Schedule
+9) Checkup Schedule---
 10) Special Checkup Schedule
 11) Member Appointments
 12) Nurse
-13) Doctor
+13) Doctor---
 
 We have to create a separate class for each database table in the files models.py. For example, tables 3,5,6,7,9,13 will be created in the file doctors/models.py. tables 1,2,4,11 will be in residents/models.py. And rest of them will be in nurses/models.py.
 
